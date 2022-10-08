@@ -14,5 +14,5 @@ public interface TicketService {
     boolean addOrUpdate(Ticket ticket);
 
     List<Ticket> getTicketList(Map<String, String> params, int page, Integer customerId);
-
+    List<Ticket> findTicketByCoachLine(int coachLineId);
 }

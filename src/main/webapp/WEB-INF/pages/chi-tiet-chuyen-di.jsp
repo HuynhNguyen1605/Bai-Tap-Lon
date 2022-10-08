@@ -253,8 +253,15 @@
                             <li class="row row--1">
                                 <ol class="seats">
                                     <c:forEach items="${seats}" var="seat" begin="${i*4}" end="${i*4+3}">
+
+                                        <c:if test="${bookedSeat.contains(seat)}">
+                                            <c:set var="disable" value="true"/>
+                                        </c:if>
                                         <li class="seat">
-                                            <input class="seat-index" type="checkbox" name="seat" id="${seat}" value="${seat}" />
+                                            <input class="seat-index" type="checkbox" name="seat" id="${seat}" value="${seat}"
+                                                    <c:if test="${bookedSeat.contains(seat)}">
+                                                        disabled
+                                                    </c:if>/>
                                             <label for="${seat}">${seat}</label>
                                         </li>
                                     </c:forEach>

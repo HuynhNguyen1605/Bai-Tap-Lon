@@ -38,4 +38,9 @@ public class TicketServiceImpl implements TicketService {
         return this.ticketRepository.getTickets(params, page, customerId);
     }
 
+    @Override
+    public List<Ticket> findTicketByCoachLine(int coachLineId){
+        return ticketRepository.findTicketByCoachline(coachLineId);
+    }
+
 }

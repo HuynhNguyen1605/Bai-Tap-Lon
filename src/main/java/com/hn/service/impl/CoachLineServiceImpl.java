@@ -2,11 +2,14 @@ package com.hn.service.impl;
 
 import com.hn.pojo.CoachLine;
 import com.hn.pojo.Comment;
+import com.hn.pojo.Ticket;
 import com.hn.repository.CoachLineRepository;
 import com.hn.service.CoachLineService;
+import com.hn.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -14,7 +17,8 @@ import java.util.Map;
 public class CoachLineServiceImpl implements CoachLineService {
     @Autowired
     private CoachLineRepository coachLineRepository;
-
+    @Autowired
+    TicketService ticketService;
     @Override
     public List<CoachLine> getCoachLines(Map<String, String> params, int page) {
         return this.coachLineRepository.getCoachLines(params, page);
@@ -43,5 +47,17 @@ public class CoachLineServiceImpl implements CoachLineService {
     @Override
     public List<Comment> getComments(int coachlineId) {
         return this.coachLineRepository.getComments(coachlineId);
+    }
+
+    @Override
+    public List<String> getBookedSeat(int coachlineId){
+        List<String> bookedSeat = new ArrayList<>();
+        List<Ticket> tickets = ticketService.findTicketByCoachLine(coachlineId);
+        for (Ticket ticket : tickets) {
+            if (ticket.getSeat() != null) {
+                bookedSeat.add(ticket.getSeat());
+            }
+        }
+        return bookedSeat;
     }
 }

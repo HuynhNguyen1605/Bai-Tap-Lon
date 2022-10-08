@@ -17,5 +17,6 @@ public interface CoachLineService {
 
     boolean delete(CoachLine coachLine);
     List<Comment> getComments(int coachlineId);
+    List<String> getBookedSeat(int coachlineId);
 
 }

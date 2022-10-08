@@ -125,4 +125,13 @@ public class TicketRepositoryImpl implements TicketRepository {
         }
         return query.getResultList();
      }
+
+     @Override
+    public List<Ticket> findTicketByCoachline(int coachlineId){
+         Session session = this.sessionFactory.getObject().getCurrentSession();
+         javax.persistence.Query q = session.createQuery("From Ticket t where t.coachLine.id = : coachlineId");
+         q.setParameter("coachlineId", coachlineId);
+
+         return q.getResultList();
+    }
 }

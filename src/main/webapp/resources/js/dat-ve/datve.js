@@ -1,4 +1,4 @@
-function clickDatVe(accountId, coachLineId) {
+function clickDatVe(accountId, coachLineId, seatIndex) {
     let fetchUrl = "/QuanLyDatVeXe/api/dat-ve"
 
     fetch(fetchUrl, {
@@ -6,6 +6,7 @@ function clickDatVe(accountId, coachLineId) {
         body: JSON.stringify({
             "coachLineId": coachLineId,
             "accountId": accountId,
+            "seatIndex": seatIndex
 
         }),
         headers: {

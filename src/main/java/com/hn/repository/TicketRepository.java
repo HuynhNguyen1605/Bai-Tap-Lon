@@ -15,5 +15,6 @@ public interface TicketRepository {
     boolean addOrUpdate(Ticket ticket);
 
     List<Ticket> getTickets(Map<String, String> params, int page, Integer customerId);
+    List<Ticket> findTicketByCoachline(int coachlineId);
 
 }

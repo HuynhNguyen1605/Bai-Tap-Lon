@@ -2,6 +2,7 @@ package com.hn.controllers;
 
 import com.hn.dto.Seat;
 import com.hn.pojo.CoachLine;
+import com.hn.pojo.Ticket;
 import com.hn.service.CoachLineService;
 import com.hn.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,10 +27,10 @@ public class CoachLineController {
                                   Model model) {
 
         CoachLine coachLine = coachLineService.getById(id);
-//        List<String> bookedSeat = coachLineService.getBookedSeat(coachLine.getId());
+        List<String> bookedSeat = coachLineService.getBookedSeat(coachLine.getId());
         model.addAttribute("seats", getSeats());
         model.addAttribute("coachLine", coachLine);
-//        model.addAttribute("bookedSeat",bookedSeat);
+        model.addAttribute("bookedSeat",bookedSeat);
         return "chi-tiet-chuyen-di";
     }
 
