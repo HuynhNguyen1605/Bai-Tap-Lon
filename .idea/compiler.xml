@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="QuanLyDatVeXe" />
+        <module name="JobSearchingSpringMVC" />
+        <module name="QuanLyDatVeXe-master" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="JobSearchingSpringMVC" options="-endorseddirs &quot;F:\Learning\Java Programming\Project\JobSearchingSpringMVC_v2\JobSearchingSpringMVC\target/endorsed&quot;" />
+      <module name="QuanLyDatVeXe" options="-endorseddirs N:\LapTrinhJaVa\baitaplon\QuanLyDatVeXe-master\target/endorsed" />
+      <module name="QuanLyDatVeXe-master" options="-endorseddirs &quot;N:\LapTrinhJaVa\bai tap lon\QuanLyDatVeXe-master\target/endorsed&quot;" />
+    </option>
+  </component>
+</project>

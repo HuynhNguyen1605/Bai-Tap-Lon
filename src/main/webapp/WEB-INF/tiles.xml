@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN" "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+    <definition name="baseLayout" template="/WEB-INF/layout/base.jsp">
+        <put-attribute name="title" value="" />
+        <put-attribute name="header" value="/WEB-INF/layout/header.jsp" />
+        <put-attribute name="footer" value="/WEB-INF/layout/footer.jsp" />
+        <put-attribute name="content" value="" />
+    </definition>
+
+    <definition name="index" extends="baseLayout">
+        <put-attribute name="title" value="Trang chủ" />
+        <put-attribute name="content" value="/WEB-INF/pages/index.jsp" />
+    </definition>
+
+    <definition name="login" extends="baseLayout">
+        <put-attribute name="title" value="Trang đăng nhập" />
+        <put-attribute name="content" value="/WEB-INF/pages/login.jsp" />
+    </definition>
+
+    <definition name="dat-ve" extends="baseLayout">
+        <put-attribute name="title" value="Trang đặt vé" />
+        <put-attribute name="content" value="/WEB-INF/pages/dat-ve.jsp" />
+    </definition>
+
+    <definition name="chi-tiet-chuyen-di" extends="baseLayout">
+        <put-attribute name="title" value="Trang chi tiết chuyến đi" />
+        <put-attribute name="content" value="/WEB-INF/pages/chi-tiet-chuyen-di.jsp" />
+    </definition>
+
+    <definition name="chi-tiet-tai-khoan" extends="baseLayout">
+        <put-attribute name="title" value="Trang chi tiết tài khoản" />
+        <put-attribute name="content" value="/WEB-INF/pages/chi-tiet-tai-khoan.jsp" />
+    </definition>
+
+    <definition name="dang-ky" extends="baseLayout">
+        <put-attribute name="title" value="Trang đăng ký" />
+        <put-attribute name="content" value="/WEB-INF/pages/dang-ky.jsp" />
+    </definition>
+
+    <definition name="gio-hang" extends="baseLayout">
+        <put-attribute name="title" value="Trang giỏ hàng" />
+        <put-attribute name="content" value="/WEB-INF/pages/gio-hang.jsp" />
+    </definition>
+
+    <definition name="quan-ly-tai-khoan" extends="baseLayout">
+        <put-attribute name="title" value="Trang quản lý tài khoản" />
+        <put-attribute name="content" value="/WEB-INF/pages/quan-ly-tai-khoan.jsp" />
+    </definition>
+
+    <definition name="quan-ly-chuyen-xe" extends="baseLayout">
+        <put-attribute name="title" value="Trang quản lý chuyến xe" />
+        <put-attribute name="content" value="/WEB-INF/pages/quan-ly-chuyen-xe.jsp" />
+    </definition>
+
+    <definition name="sua-tai-khoan" extends="baseLayout">
+        <put-attribute name="title" value="Trang sửa tài khoản" />
+        <put-attribute name="content" value="/WEB-INF/pages/sua-tai-khoan.jsp" />
+    </definition>
+
+    <definition name="trang-chu-tai-xe" extends="baseLayout">
+        <put-attribute name="title" value="Trang chủ tài xế" />
+        <put-attribute name="content" value="/WEB-INF/pages/trang-chu-tai-xe.jsp" />
+    </definition>
+
+    <definition name="trang-chu-dat-ve" extends="baseLayout">
+        <put-attribute name="title" value="Trang chủ đặt vé" />
+        <put-attribute name="content" value="/WEB-INF/pages/trang-chu-dat-ve.jsp" />
+    </definition>
+
+    <definition name="trang-chu-admin" extends="baseLayout">
+        <put-attribute name="title" value="Trang chủ admin" />
+        <put-attribute name="content" value="/WEB-INF/pages/trang-chu-admin.jsp" />
+    </definition>
+
+    <definition name="trang-bat-dau" extends="baseLayout">
+        <put-attribute name="title" value="Trang bắt đầu" />
+        <put-attribute name="content" value="/WEB-INF/pages/trang-bat-dau.jsp" />
+    </definition>
+
+    <definition name="them-coach-way" extends="baseLayout">
+        <put-attribute name="title" value="Thêm hành trình" />
+        <put-attribute name="content" value="/WEB-INF/pages/them-coach-way.jsp" />
+    </definition>
+
+    <definition name="them-coach-line" extends="baseLayout">
+        <put-attribute name="title" value="Thêm tuyến" />
+        <put-attribute name="content" value="/WEB-INF/pages/them-coach-line.jsp" />
+    </definition>
+
+    <definition name="quan-ly-hanh-trinh" extends="baseLayout">
+        <put-attribute name="title" value="Quản lý hành trình" />
+        <put-attribute name="content" value="/WEB-INF/pages/quan-ly-hanh-trinh.jsp" />
+    </definition>
+
+    <definition name="Trang-chu-khach-hang" extends="baseLayout">
+        <put-attribute name="title" value="Trang chủ khách hàng" />
+        <put-attribute name="content" value="/WEB-INF/pages/Trang-chu-khach-hang.jsp" />
+    </definition>
+
+    <definition name="gioi-thieu" extends="baseLayout">
+        <put-attribute name="title" value="Giới thiệu" />
+        <put-attribute name="content" value="/WEB-INF/pages/gioi-thieu.jsp" />
+    </definition>
+
+    <definition name="lien-he" extends="baseLayout">
+        <put-attribute name="title" value="Liên hệ" />
+        <put-attribute name="content" value="/WEB-INF/pages/lien-he.jsp" />
+    </definition>
+
+    <definition name="chuyen-di-tai-xe" extends="baseLayout">
+        <put-attribute name="title" value="Chuyến đi của tài xế" />
+        <put-attribute name="content" value="/WEB-INF/pages/chuyen-di-tai-xe.jsp" />
+    </definition>
+
+    <definition name="quan-ly-bo-phan" extends="baseLayout">
+        <put-attribute name="title" value="Quản lý bộ phận" />
+        <put-attribute name="content" value="/WEB-INF/pages/quan-ly-bo-phan.jsp" />
+    </definition>
+
+    <definition name="them-bo-phan" extends="baseLayout">
+        <put-attribute name="title" value="Thêm bộ phận" />
+        <put-attribute name="content" value="/WEB-INF/pages/them-bo-phan.jsp" />
+    </definition>
+
+</tiles-definitions>
